@@ -1,38 +1,55 @@
 body {
-  background-color: #f9f7fe;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/179/612/original/3d-render-globe-abstract-background.jpg?1776418470");
 }
 
 .container {
   max-width: 600px;
-  margin: 60px auto;
-  background: white;
+  margin: 45px auto;
+  background: #082042;
   box-shadow: (100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
+  border: #011422;
+  margin-bottom: 20px;
 }
 
 h1 {
   text-align: center;
+  color: #011422;
+  font-size: 48px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 h2 {
   margin: 0 0 10px;
   font-size: 28px;
+  color: #a4b7c6;
 }
 
+a {
+  color: blueviolet;
+}
 select {
   display: block;
   width: 98%;
   border-radius: 4px;
   padding: 10px;
-  margin: 0 5px 5px;
+  margin: 30px 5px 0px;
+  background-color: #a4b7c6;
+  font-size: 14px;
+}
+
+.h1 {
+  background-color: #a4b7c6;
+  border-radius: 14px;
 }
 
 .city {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-  padding: 30px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-bottom: 1px solid rgba(164, 183, 198, 0.3);
 }
 
 .city:last-child {
@@ -41,21 +58,25 @@ select {
 
 .date {
   opacity: 0.7;
+  color: wheat;
 }
 
 .time {
   font-size: 48px;
   font-weight: bold;
+  color: #a4b7c6;
 }
 
 .time small {
   font-size: 18px;
   vertical-align: middle;
   line-height: 48px;
+  color: wheat;
 }
 
 footer {
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
+  margin-top: 15px;
 }

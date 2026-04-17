@@ -7,7 +7,7 @@ function updateTime() {
 
     let aucklandTime = moment().tz("Pacific/Auckland");
 
-    aucklandDateElement.innerHTML = aucklandTime.format("MMMM Do YYYY");
+    aucklandDateElement.innerHTML = aucklandTime.format("MMMM Do, YYYY");
 
     aucklandTimeElement.innerHTML = aucklandTime.format(
       "h:mm:ss [<small>]A[</small>]",
@@ -21,9 +21,38 @@ function updateTime() {
 
     let johannesburgTime = moment().tz("Africa/Johannesburg");
 
-    johannesburgDateElement.innerHTML = johannesburgTime.format("MMMM Do YYYY");
+    johannesburgDateElement.innerHTML =
+      johannesburgTime.format("MMMM Do, YYYY");
 
     johannesburgTimeElement.innerHTML = johannesburgTime.format(
+      "h:mm:ss [<small>]A[</small>]",
+    );
+  }
+
+  let londonElement = document.querySelector("#london");
+  if (londonElement) {
+    let londonDateElement = londonElement.querySelector(".date");
+    let londonTimeElement = londonElement.querySelector(".time");
+
+    let londonTime = moment().tz("Europe/London");
+
+    londonDateElement.innerHTML = londonTime.format("MMMM Do, YYYY");
+
+    londonTimeElement.innerHTML = londonTime.format(
+      "h:mm:ss [<small>]A[</small>]",
+    );
+  }
+
+  let chicagoElement = document.querySelector("#chicago");
+  if (chicagoElement) {
+    let chicagoDateElement = chicagoElement.querySelector(".date");
+    let chicagoTimeElement = chicagoElement.querySelector(".time");
+
+    let chicagoTime = moment().tz("America/Chicago");
+
+    chicagoDateElement.innerHTML = chicagoTime.format("MMMM Do, YYYY");
+
+    chicagoTimeElement.innerHTML = chicagoTime.format(
       "h:mm:ss [<small>]A[</small>]",
     );
   }
@@ -42,12 +71,13 @@ function updateCity(event) {
   <div class="city">
     <div>
       <h2>${cityName}</h2>
-      <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
+      <div class="date">${cityTime.format("MMMM	Do, YYYY")}</div>
     </div>
     <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
       "A",
     )}</small></div>
   </div>
+  <a href ="/">  Back to select city</a>
   `;
 }
 updateTime();
